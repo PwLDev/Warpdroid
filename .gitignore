@@ -1,0 +1,10 @@
+# Nodejs
+node_modules
+
+# System files
+.DS_Store
+.local.env
+
+# Generated files
+dist
+build

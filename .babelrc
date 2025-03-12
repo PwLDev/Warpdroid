@@ -1,0 +1,7 @@
+{
+    "presets": [
+        ["@babel/preset-env", { "targets": { "electron": "curremt" } }],
+        "@babel/preset-react",
+        "@babel/preset-typescript"
+    ]
+}
