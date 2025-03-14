@@ -1,2 +1,2 @@
 # Warpdroid
-Scratch and web game compiler to native Android apps.
+Scratch, Web game and HTML compiler to native Android apps.
