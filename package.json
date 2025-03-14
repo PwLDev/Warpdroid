@@ -1,7 +1,8 @@
 {
   "name": "warpdroid",
-  "version": "0.1.0",
+  "version": "0.2.1",
   "private": true,
+  "main": "dist/main/app.js",
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
@@ -14,20 +15,25 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-scripts": "5.0.1",
-    "typescript": "^4.9.5",
-    "web-vitals": "^2.1.4"
+    "typescript": "^4.9.5"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "dev": "tsc && npm run start",
+    "start": "concurrently \"react-scripts start\" \"electron .\"",
+    "build": "tsc && react-scripts build",
+    "lint": "npx eslint .",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "devDependencies": {
+    "@eslint/js": "^9.22.0",
+    "concurrently": "^9.1.2",
+    "electron": "^35.0.1",
+    "electron-builder": "^25.1.8",
+    "electron-is-dev": "^3.0.1",
+    "eslint": "^8.57.1",
+    "eslint-plugin-react": "^7.37.4",
+    "typescript-eslint": "^8.26.1"
   },
   "browserslist": {
     "production": [
