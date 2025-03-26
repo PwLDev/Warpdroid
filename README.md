@@ -1,19 +1,19 @@
 <div align="center">
     <h1>Warpdroid</h1>
     <img src="./public/warpdroid.svg" width="100" /><br>
-    <i>Turbowarp, Scratch, and WebGL compiler to native Android apps.</i>
+    <i>TurboWarp, Scratch, and WebGL compiler to native Android apps.</i>
 </div>
 
 ## About
 **Warpdroid** is a GUI for automating the process of embedding WebGL-powered apps and games into a native Android app project
 
-Its mission is to optimize WebGL for execution on mobile devices, primarily from Turbowarp or Scratch games, also supports other game engines or plain HTML pages.
+Its mission is to optimize WebGL for execution on mobile devices, primarily from TurboWarp or Scratch games, also supports other game engines or plain HTML pages.
 
 You can think of it as [**Electron**](https://electronjs.org), but it compiles to Android native apps.
-It runs over the [**GeckoView**](https://mozilla.github.io/geckoview) bundled WebView implementation for universal compatibility between Android devices, regarding their system WebView implementation; the missing [Turbowarp Packager](https://packager.turbowarp.org) platform option.
+It runs over the [**GeckoView**](https://mozilla.github.io/geckoview) bundled WebView implementation for universal compatibility between Android devices, regarding their system WebView implementation; the missing [TurboWarp Packager](https://packager.turbowarp.org) platform option.
 
 ## Supported Engines
-- [Turbowarp](https://turbowarp.org)
+- [TurboWarp](https://turbowarp.org)
 - [Scratch](https://scratch.mit.edu) (v1, v2, v3)
 - [Forkphorus](https://forkphorus)
 - [HTMLifier](https://sheeptester.github.io/htmlifier)
@@ -77,7 +77,7 @@ Congrats! You now are running Warpdroid locally, modify it as you like, *but don
 Yes! It's free, and you can use it as much as you want. :D
 
 ### How can I add mobile controls?
-Warpdroid doesn't provide them built in, although you can make those using [**Turbowarp**](https://turbowarp.org), add the [**Sensing Plus**](https://extensions.turbowarp.org/obviousAlexC/SensingPlus.js) extension to your current Scratch/Turbowarp project.
+Warpdroid doesn't provide them built in, although you can make those using [**TurboWarp**](https://turbowarp.org), add the [**Sensing Plus**](https://extensions.turbowarp.org/obviousAlexC/SensingPlus.js) extension to your current Scratch/TurboWarp project.
 
 ### Why can't Warpdroid run on Android itself!?
 I created the Warpdroid GUI using Electron, yet Electron does not support building to Android devices, Warpdroid itself does that but it'll be a hassle to rebundle Warpdroid using Warpdroid lol.
@@ -94,3 +94,12 @@ Absolutely, Warpdroid provides **.aab** bundle compilation, just make sure to se
 
 ### Do you like cats?
 Yea, they're so cute, they're the best! Meow :3
+
+## Credits
+Backend and compilers by [**PwLDev**](https://github.com/PwLDev)
+UI design and icon by [**Dogo6647**](https://github.com/Dogo6647)
+
+Desktop app made with [**Electron**](https://electronjs.org).
+UI made with [**React**](https://react.dev).
+
+Thanks for using Warpdroid. :3
