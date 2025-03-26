@@ -35,10 +35,9 @@ export class AbstractWindow {
         const { width, height } = screen.getPrimaryDisplay().workAreaSize;
 
         const windowWidth = Math.round(width * 0.85);
-        const windowHeight = Math.round(height * 0.9);
+        const windowHeight = Math.round(height * 0.85);
         const x = Math.round((width - windowWidth) / 2);
         const y = Math.round((height - windowHeight) / 2);
-        console.log(x, y)
 
         return {
             x, y,

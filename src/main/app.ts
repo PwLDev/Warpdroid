@@ -30,6 +30,7 @@ app.setAboutPanelOptions({
     applicationName: "Warpdroid",
     applicationVersion: process.env.npm_package_version || "v0.2.0",
     authors: ["PwLDev", "Dogo6647"],
+    iconPath: path.join(__dirname, "../ui/static/warpdroid.png"),
     version: "6",
     website: "https://github.com/PwLDev/Warpdroid"
 });
