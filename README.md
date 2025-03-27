@@ -10,7 +10,7 @@
 Its mission is to optimize WebGL for execution on mobile devices, primarily from TurboWarp or Scratch games, also supports other game engines or plain HTML pages.
 
 You can think of it as [**Electron**](https://electronjs.org), but it compiles to Android native apps.
-It runs over the [**GeckoView**](https://mozilla.github.io/geckoview) bundled WebView implementation for universal compatibility between Android devices, regarding their system WebView implementation; the missing [TurboWarp Packager](https://packager.turbowarp.org) platform option.
+It runs over the [**GeckoView**](https://mozilla.github.io/geckoview) bundled WebView implementation for universal compatibility between Android devices, regardless of their system WebView implementation; the missing [TurboWarp Packager](https://packager.turbowarp.org) platform option.
 
 ## Supported Engines
 - [TurboWarp](https://turbowarp.org)
@@ -24,13 +24,14 @@ It runs over the [**GeckoView**](https://mozilla.github.io/geckoview) bundled We
 All of these supported out of the box.
 
 ## Requirements
+- Your game in a supported format
 - A computer with one of these operating systems:
     - Windows (32 or 64 bits)
     - MacOS (Intel or Apple Silicon)
     - Linux (Debian-based)
+- Internet connnection
 - Java 8 
 - Gradle
-- Your game in a supported format
 
 These last two can be installed automatically by Warpdroid.
 
@@ -38,7 +39,7 @@ No, the Warpdroid GUI can't run on phones, see the reason [here](#why-cant-warpd
 
 ## Get Started
 Time to warp your game to Android!
-You can get started by following the walkthough tutorial I made in the **Warpdroid Wiki**, it won't be hard, I swear, [check it out!](https://github.com/PwLDev/Warpdroid/wiki)
+You can get started by following the walkthrough tutorial I made at the **Warpdroid Wiki**, it won't be hard, I swear, [check it out!](https://github.com/PwLDev/Warpdroid/wiki)
 
 ## Environment Setup
 If you'd like to debug Warpdroid or modify its source you can set up your own environment.
@@ -76,8 +77,12 @@ Congrats! You now are running Warpdroid locally, modify it as you like, *but don
 ### Is Warpdroid free?
 Yes! It's free, and you can use it as much as you want. :D
 
+### Is a Warpdroid project different from a game project?
+Yes, Warpdroid uses its own projects in order to keep everything more organized and to save app configurations easier.
+In the Warpdroid project is where you'll import your game file(s) and set up your app.
+
 ### How can I add mobile controls?
-Warpdroid doesn't provide them built in, although you can make those using [**TurboWarp**](https://turbowarp.org), add the [**Sensing Plus**](https://extensions.turbowarp.org/obviousAlexC/SensingPlus.js) extension to your current Scratch/TurboWarp project.
+Warpdroid doesn't provide them built in, although you can make those with [**TurboWarp**](https://turbowarp.org) itself, add the [**Sensing Plus**](https://extensions.turbowarp.org/obviousAlexC/SensingPlus.js) extension to your current Scratch/TurboWarp project.
 
 ### Why can't Warpdroid run on Android itself!?
 I created the Warpdroid GUI using Electron, yet Electron does not support building to Android devices, Warpdroid itself does that but it'll be a hassle to rebundle Warpdroid using Warpdroid lol.
@@ -101,4 +106,4 @@ Yea, they're so cute, they're the best! Meow :3
 - Desktop app made with [**Electron**](https://electronjs.org).
 - UI made with [**React**](https://react.dev).
 
-Thanks for using Warpdroid. :3
+Thank you for using Warpdroid, we appreciate that. :3
