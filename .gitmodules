@@ -1,0 +1,3 @@
+[submodule "src/extractors/unpackager"]
+	path = src/extractors/unpackager
+	url = https://github.com/TurboWarp/unpackager.git

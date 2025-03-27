@@ -96,10 +96,9 @@ Absolutely, Warpdroid provides **.aab** bundle compilation, just make sure to se
 Yea, they're so cute, they're the best! Meow :3
 
 ## Credits
-Backend and compilers by [**PwLDev**](https://github.com/PwLDev)
-UI design and icon by [**Dogo6647**](https://github.com/Dogo6647)
-
-Desktop app made with [**Electron**](https://electronjs.org).
-UI made with [**React**](https://react.dev).
+- Backend and compilers by [**PwLDev**](https://github.com/PwLDev).
+- UI design and icon by [**Dogo6647**](https://github.com/Dogo6647).
+- Desktop app made with [**Electron**](https://electronjs.org).
+- UI made with [**React**](https://react.dev).
 
 Thanks for using Warpdroid. :3

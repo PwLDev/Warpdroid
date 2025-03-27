@@ -27,7 +27,6 @@ export class AbstractWindow {
         }
 
         this.initialURL = null;
-
         Menu.setApplicationMenu(WarpdroidMenu.getMenu());
     }
 
@@ -35,7 +34,7 @@ export class AbstractWindow {
         const { width, height } = screen.getPrimaryDisplay().workAreaSize;
 
         const windowWidth = Math.round(width * 0.85);
-        const windowHeight = Math.round(height * 0.85);
+        const windowHeight = Math.round(height * 0.9);
         const x = Math.round((width - windowWidth) / 2);
         const y = Math.round((height - windowHeight) / 2);
 
@@ -48,16 +47,16 @@ export class AbstractWindow {
 
     protected getWindowOptions(): BrowserWindowConstructorOptions {
         return {
-            minWidth: 200,
-            minHeight: 200,
+            minWidth: 400,
+            minHeight: 400,
+            center: true,
             resizable: true,
             useContentSize: true,
             webPreferences: {
                 preload: path.join(__dirname, "preload.js"),
+                javascript: true,
                 nodeIntegration: false,
-                contextIsolation: true,
-                sandbox: true,
-                javascript: true
+                contextIsolation: true
             }
         }
     }

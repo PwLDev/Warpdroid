@@ -1,8 +1,10 @@
 import { contextBridge, ipcRenderer } from "electron";
 
 contextBridge.exposeInMainWorld(
-    "warpdroid",
+    "versions",
     {
-        platform: process.platform
+        chromium: process.versions.chrome,
+        electron: process.versions.electron,
+        node: process.versions.node
     }
 );
