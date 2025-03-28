@@ -1,0 +1,21 @@
+plugins {
+    id "com.android.application"
+}
+
+android {
+    namespace "{{package_name}}"
+    compileSdk "{{compile_sdk}}"
+
+    defaultConfig {
+        applicationId "{{package_name}}"
+        targetSdk {{min_sdk}}
+        targetSdk {{target_sdk}}
+        versionCode {{version_code}}
+        versionName {{version_name}}
+    }
+}
+
+dependencies {
+    implementation "androidx.appcompat:appcompat:1.6.1"
+    implementation "org.mozilla.geckoview:geckoview:{{geckoview_version}}"
+}
