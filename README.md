@@ -15,7 +15,7 @@ It runs over the [**GeckoView**](https://mozilla.github.io/geckoview) bundled We
 ## Supported Engines
 - [TurboWarp](https://turbowarp.org)
 - [Scratch](https://scratch.mit.edu) (v1, v2, v3)
-- [Forkphorus](https://forkphorus)
+- [Forkphorus](https://forkphorus.github.io)
 - [HTMLifier](https://sheeptester.github.io/htmlifier)
 - [Three.js](https://threejs.org)
 - WebGL-powered games
@@ -84,7 +84,7 @@ In the Warpdroid project is where you'll import your game file(s) and set up you
 ### How can I add mobile controls?
 Warpdroid doesn't provide them built in, although you can make those with [**TurboWarp**](https://turbowarp.org) itself, add the [**Sensing Plus**](https://extensions.turbowarp.org/obviousAlexC/SensingPlus.js) extension to your current Scratch/TurboWarp project.
 
-### Why can't Warpdroid run on Android itself!?
+### Why Warpdroid can't run on Android itself!?
 I created the Warpdroid GUI using Electron, yet Electron does not support building to Android devices, Warpdroid itself does that but it'll be a hassle to rebundle Warpdroid using Warpdroid lol.
 
 Also, Gradle needs quite a lot of computation power which is not found in most smartphones.
@@ -95,13 +95,13 @@ I don't know, he missed the party of open source WebView implementations as he's
 Also, good luck with touch controls on Safari, they seem to hate those.
 
 ### Can I publish my apps made with Warpdroid to the Google Play Store?
-Absolutely, Warpdroid provides **.aab** bundle compilation, just make sure to set up correctly the app permissions and make yourself a **privacy policy** and you're good to go.
+Absolutely, Warpdroid provides **.aab** bundle building, just make sure to set up correctly the app permissions and make yourself a **privacy policy** and you're good to go.
 
 ### Do you like cats?
 Yea, they're so cute, they're the best! Meow :3
 
 ## Credits
-- Backend and compilers by [**PwLDev**](https://github.com/PwLDev).
+- Backend, extractors and compilation by [**PwLDev**](https://github.com/PwLDev).
 - UI design and icon by [**Dogo6647**](https://github.com/Dogo6647).
 - Desktop app made with [**Electron**](https://electronjs.org).
 - UI made with [**React**](https://react.dev).

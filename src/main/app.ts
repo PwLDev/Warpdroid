@@ -1,7 +1,9 @@
-import { app } from "electron";
+import { app, Menu } from "electron";
 import isDev from "electron-is-dev";
 import path from "node:path";
 
+import { WarpdroidMenu } from "./menu.js";
+import { registerListeners } from "./renderer.js";
 import { AbstractWindow } from "./window.js";
 
 const initWindow = () => {
@@ -15,9 +17,13 @@ const initWindow = () => {
         "http://localhost:3000" :
         "file://" + path.join(__dirname, "../ui/index.html")
     );
+
+    Menu.setApplicationMenu(WarpdroidMenu.getMenu(window));
 }
 
-app.whenReady().then(initWindow);
+app.whenReady()
+    .then(registerListeners)
+    .then(initWindow);
 
 app.on("window-all-closed", () => {
     // Close app on MacOS
@@ -28,9 +34,8 @@ app.on("window-all-closed", () => {
 
 app.setAboutPanelOptions({
     applicationName: "Warpdroid",
-    applicationVersion: process.env.npm_package_version || "v0.2.0",
+    applicationVersion: process.env.npm_package_version,
     authors: ["PwLDev", "Dogo6647"],
     iconPath: path.join(__dirname, "../ui/static/warpdroid.png"),
-    version: "6",
     website: "https://github.com/PwLDev/Warpdroid"
 });

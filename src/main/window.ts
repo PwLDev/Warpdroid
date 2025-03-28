@@ -27,7 +27,6 @@ export class AbstractWindow {
         }
 
         this.initialURL = null;
-        Menu.setApplicationMenu(WarpdroidMenu.getMenu());
     }
 
     static calculateBounds(): Rectangle {

@@ -1,7 +1,13 @@
-import { app, Menu, MenuItem, shell } from "electron";
+import { app, dialog, Menu, Notification, pushNotifications, shell } from "electron";
+import fs from "node:fs";
+
+import { projectDialog } from "./renderer";
+import { AbstractWindow } from "./window";
 
 export class WarpdroidMenu {
-    static getMenu() {
+    static getMenu(mainWindow: AbstractWindow) {
+        const { window } = mainWindow;
+
         return Menu.buildFromTemplate([
             {
                 role: "appMenu",
@@ -18,9 +24,7 @@ export class WarpdroidMenu {
                     {
                         label: "Quit",
                         accelerator: process.platform == "darwin" ? "Command+Q" : "Alt+F4",
-                        click: () => {
-                            app.quit();
-                        }
+                        click: () => app.quit()
                     }
                 ]
             },
@@ -34,7 +38,14 @@ export class WarpdroidMenu {
                     },
                     {
                         label: "Open Project",
-                        accelerator: process.platform == "darwin" ? "Command+Shift+O" : "Ctrl+Shift+O"
+                        accelerator: process.platform == "darwin" ? "Command+Shift+O" : "Ctrl+Shift+O",
+                        click: async () => {
+                            const file = await projectDialog();
+                            const path = file.filePaths[0];
+                            if (path && path.length > 0) {
+                                window.webContents.send("openProject", fs.readFileSync(path, { encoding: "utf-8" }))
+                            }
+                        }
                     },
                     {
                         label: "Open Recents",
@@ -58,16 +69,12 @@ export class WarpdroidMenu {
                     {
                         label: "Warpdroid Wiki",
                         type: "normal",
-                        click: () => {
-                            shell.openExternal("https://github.com/PwLDev/Warpdroid/tree/main");
-                        }
+                        click: () => shell.openExternal("https://github.com/PwLDev/Warpdroid/tree/main")
                     },
                     {
                         label: "GitHub Repo",
                         type: "normal",
-                        click: () => {
-                            shell.openExternal("https://github.com/PwLDev/Warpdroid/tree/main");
-                        }
+                        click: () => shell.openExternal("https://github.com/PwLDev/Warpdroid/tree/main")
                     }
                 ]
             }

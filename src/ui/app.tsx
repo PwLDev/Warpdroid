@@ -1,17 +1,16 @@
 import React from "react";
 import "./styles/layout.css";
 
-declare global {
-	interface Window {
-		versions: {
-			chromium: string,
-			electron: string,
-			node: string
-		}
-	}
-}
-
 function App() {
+	const requestOpenProject = () => {
+		const file = window.projects.load();
+		if (!file) return;
+
+		window.warpdroid.on("openProject", (file: string) => {
+			console.log(file);
+		});
+	}
+
 	return (
 		<div className="App">
 			<h1>Welcome to Warpdroid</h1>
@@ -21,6 +20,10 @@ function App() {
 					window.versions.electron
 				}
 			</p>
+			<button
+				onClick={requestOpenProject}>
+				Open project
+			</button>
 		</div>
 	);
 }
