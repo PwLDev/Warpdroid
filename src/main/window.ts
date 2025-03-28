@@ -18,7 +18,7 @@ export class AbstractWindow {
         this.window.webContents.on("before-input-event", this.handleInput.bind(this));
 
         if (!options.existingWindow) {
-            let bounds = AbstractWindow.calculateBounds();
+            const bounds = AbstractWindow.calculateBounds();
             this.window.setBounds(bounds);
         }
 

@@ -4,7 +4,7 @@ import react from "eslint-plugin-react";
 
 export default tslint.config(
     {
-        ignores: ["dist/**/*", "node_modules/**/*"],
+        ignores: ["dist/**/*", "node_modules/**/*", "src/**/*.js"],
         extends: [
             eslint.configs.recommended,
             tslint.configs.stylistic
