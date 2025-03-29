@@ -15,6 +15,20 @@ export const projectDialog = async () => {
     });
 }
 
+export const gameDialog = async () => {
+    return dialog.showOpenDialog({
+        buttonLabel: "Load",
+        properties: ["openFile"],
+        title: "Select a Scratch project",
+        filters: [
+            {
+                name: "Scratch Project",
+                extensions: ["html", "sb3", "sb2", "sb", "zip"]
+            }
+        ]
+    });
+}
+
 export const registerListeners = () => {
     ipcMain.on("requestProject", async (event) => {
         const file = await projectDialog();

@@ -101,8 +101,8 @@ Absolutely, Warpdroid provides **.aab** bundle building, just make sure to set u
 Yea, they're so cute, they're the best! Meow :3
 
 ## Credits
-- Backend, extractors and compilation by [**PwLDev**](https://github.com/PwLDev).
-- UI design and icon by [**Dogo6647**](https://github.com/Dogo6647).
+- Backend, extractors and native code by [**PwLDev**](https://github.com/PwLDev).
+- UI design and icons by [**Dogo6647**](https://github.com/Dogo6647).
 - Desktop app made with [**Electron**](https://electronjs.org).
 - UI made with [**React**](https://react.dev).
 
