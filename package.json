@@ -29,8 +29,7 @@
     "start": "react-scripts start",
     "build": "tsc && react-scripts build",
     "lint": "npx eslint .",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
+    "test": "react-scripts test --watchAll",
     "electron": "electron ."
   },
   "devDependencies": {
